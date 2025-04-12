@@ -24,22 +24,26 @@ export default function TabTwoScreen() {
         <View style={styles1.stepContainer}>
             <ThemedText type="title">settings</ThemedText>
         </View>
+        <FlatList
+                  data={testDictionary}
+                  renderItem={({item}) => <Item title={item.title} />}
+        />
     </View>
     </ParallaxScrollView>
     );
 }
 
 const testDictionary = [
-    { id: 1, title: 'Test Project 1' },
-    { id: 2, title: 'Test Project 2' },
-    { id: 3, title: 'Test Project 3' },
-    { id: 4, title: 'Test Project 4' },
-    { id: 5, title: 'Test Project 5' },
-    { id: 6, title: 'Test Project 6' },
-    { id: 7, title: 'Test Project 7' },
-    { id: 8, title: 'Test Project 8' },
-    { id: 9, title: 'Test Project 9' },
-    { id: 10, title: 'Test Project 10' },
+    { id: 1, title: 'Light/Dark Mode' },
+    { id: 2, title: 'Goals' },
+    { id: 3, title: 'Shenanigans' },
+    { id: 4, title: 'Shenanigans' },
+    { id: 5, title: 'Shenanigans' },
+    { id: 6, title: 'Shenanigans' },
+    { id: 7, title: 'Shenanigans' },
+    { id: 8, title: 'Shenanigans' },
+    { id: 9, title: 'Shenanigans' },
+    { id: 10, title: 'Shenanigans' },
 ];
 
 
