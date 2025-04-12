@@ -1,19 +1,14 @@
 import { useRouter } from 'expo-router';
 import { styles } from '@/constants/styles';
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { useForm, Controller } from 'react-hook-form';
 import CircularProgress from 'react-native-circular-progress-indicator';
-import React , {useState} from 'react';
+import React , { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, SafeAreaView } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Checkbox from 'expo-checkbox';
 
-import Timeline from 'react-native-timeline-flatlist'
 
 export default function logSession() {
     const router = useRouter();

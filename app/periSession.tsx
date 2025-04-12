@@ -62,7 +62,7 @@ export default function periSession() {
             <View style={styles.contentContainer}>
                 <Button title="End Session" onPress={handleButtonPress} />
             </View>
-           
+           ~
         </ThemedView>
     );
 }
