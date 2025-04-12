@@ -1,4 +1,4 @@
-import { useRouter } from 'expo-router';
+import { useRouter, useGlobalSearchParams } from 'expo-router';
 import { styles } from '@/constants/styles';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -16,30 +16,9 @@ import Checkbox from 'expo-checkbox';
 import Timeline from 'react-native-timeline-flatlist'
 
 export default function periSession() {
+    const { tasksAct, proj } = useGlobalSearchParams();
+
     const router = useRouter();
-    const options = [  
-            {label: "Projects", value: "0"}, 
-            {label: "Leetcode", value: "1"}, 
-    ];
-    const [isFocus, setIsFocus] = useState(false);
-    const [value, setValue] = useState(null);
-
-    const renderLabel = () => {
-      if (value || isFocus) {
-        return (
-          <Text style={[styles1.label, isFocus && { color: 'blue' }]}>
-            Dropdown label
-          </Text>
-        );
-      }
-      return null;
-    };
-
-    function pForm() {
-        if (value === '0') {
-            return <ProjectForm />; // Render ProjectForm if 'Projects' is selected
-        }
-    }
 
     const handleButtonPress = () => router.push('/'); // Navigate back to the session screen
     return (
@@ -62,53 +41,12 @@ export default function periSession() {
             <View style={styles.contentContainer}>
                 <Button title="End Session" onPress={handleButtonPress} />
             </View>
-           ~
+            <Text style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>{proj}</Text>
+            <Text style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>{tasksAct}</Text>
         </ThemedView>
     );
 }
 
-function ProjectForm() {
-
-    const [isProject, setIsProject] = useState(false);
-    const [ProjValue, setProjValue] = useState(null);
-
-    return (
-        <View style={styles.dropdown}>
-            <View style={styles1.container}>
-                   <Dropdown
-                    style={[styles1.dropdown, isProject && { borderColor: 'blue' }]}
-                    placeholderStyle={styles1.placeholderStyle}
-                    selectedTextStyle={styles1.selectedTextStyle}
-                    inputSearchStyle={styles1.inputSearchStyle}
-                    iconStyle={styles1.iconStyle}
-                    data={projects}
-                    search
-                    maxHeight={300}
-                    labelField="title"
-                    valueField="value"
-                    placeholder={!isProject ? 'Select item' : '...'}
-                    searchPlaceholder="Search..."
-                    value={ProjValue}
-                    onFocus={() => setIsProject(true)}
-                    onBlur={() => setIsProject(false)}
-                    onChange={item => {
-                        setProjValue(item.value);
-                        setIsProject(false);
-                    }}
-                    />
-
-            </View>
-            
-        </View>
-    );
-}
-
-const projects = [
-    { time: '09:00', title: 'Project 1', value:"Project 1", description: 'Description for Project 1', tasks: ['Task 1', 'Task 2'] },
-    { time: '10:00', title: 'Project 2', value:"Project 2", description: 'Description for Project 2', tasks: ['Task 3', 'Task 4'] },
-    { time: '11:00', title: 'Project 3', value:"Project 3", description: 'Description for Project 3', tasks: ['Task 5', 'Task 6'] },
-    { time: '12:00', title: 'Project 4', value:"Project 4", description: 'Description for Project 4', tasks: ['Task 7', 'Task 8'] },
-];
 
 const styles1 = StyleSheet.create({
     container: {

@@ -8,12 +8,11 @@ import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
-type ProjectProps = {title: string}
 
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#ffffff', dark: '#1D3D47' }}
       headerImage={
         <Image
           source={require('@/assets/images/partial-react-logo.png')}

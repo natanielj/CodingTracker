@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "title": "Weather App",
+        "description": "pacer test.",
+        "coding_language": "JavaScript",
+        "hours_logged": 25,
+        "github_link": "https://github.com/user/weather-app",
+        "status": "Completed",
+        "tasks": {
+            "active": [],
+            "completed": ["Design UI", "Implement API integration", "Test application"]
+        }
+    },
+    {
+        "id": 2,
+        "title": "Task Manager",
+        "description": "An app to manage daily tasks and to-do lists.",
+        "coding_language": "Python",
+        "hours_logged": 40,
+        "github_link": "https://github.com/user/task-manager",
+        "status": "In Progress",
+        "tasks": {
+            "active": ["Implement user authentication", "Add task categorization"],
+            "completed": ["Set up project structure", "Create database schema"]
+        }
+    },
+    {
+        "id": 3,
+        "title": "Portfolio Website",
+        "description": "A personal portfolio showcasing projects and skills.",
+        "coding_language": "HTML/CSS",
+        "hours_logged": 15,
+        "github_link": "https://github.com/user/portfolio-website",
+        "status": "Completed",
+        "tasks": {
+            "active": [],
+            "completed": ["Design layout", "Add project showcase", "Optimize for mobile"]
+        }
+    },
+    {
+        "id": 4,
+        "title": "E-commerce Platform",
+        "description": "A platform for buying and selling products online.",
+        "coding_language": "PHP",
+        "hours_logged": 60,
+        "github_link": "https://github.com/user/ecommerce-platform",
+        "status": "In Progress",
+        "tasks": {
+            "active": ["Integrate payment gateway", "Implement product search"],
+            "completed": ["Set up database", "Create user registration"]
+        }
+    },
+    {
+        "id": 5,
+        "title": "Chat Application",
+        "description": "A real-time chat application.",
+        "coding_language": "Node.js",
+        "hours_logged": 35,
+        "github_link": "https://github.com/user/chat-application",
+        "status": "Completed",
+        "tasks": {
+            "active": [],
+            "completed": ["Set up WebSocket server", "Implement chat UI", "Add user presence feature"]
+        }
+    },
+    {
+        "id": 6,
+        "title": "Expense Tracker",
+        "description": "An app to track personal expenses and budgets.",
+        "coding_language": "Java",
+        "hours_logged": 20,
+        "github_link": "https://github.com/user/expense-tracker",
+        "status": "In Progress",
+        "tasks": {
+            "active": ["Add budget analysis feature", "Implement recurring expenses"],
+            "completed": ["Create expense input form", "Set up database"]
+        }
+    },
+    {
+        "id": 7,
+        "title": "Blog Platform",
+        "description": "A platform for creating and managing blogs.",
+        "coding_language": "Ruby",
+        "hours_logged": 50,
+        "github_link": "https://github.com/user/blog-platform",
+        "status": "Completed",
+        "tasks": {
+            "active": [],
+            "completed": ["Create blog editor", "Add comment functionality", "Optimize for SEO"]
+        }
+    },
+    {
+        "id": 8,
+        "title": "Game Engine",
+        "description": "A basic 2D game engine.",
+        "coding_language": "C++",
+        "hours_logged": 100,
+        "github_link": "https://github.com/user/game-engine",
+        "status": "In Progress",
+        "tasks": {
+            "active": ["Implement physics engine", "Add sprite animation support"],
+            "completed": ["Set up rendering engine", "Create input handling system"]
+        }
+    },
+    {
+        "id": 9,
+        "title": "Stock Tracker",
+        "description": "An app to track stock prices and trends.",
+        "coding_language": "C#",
+        "hours_logged": 30,
+        "github_link": "https://github.com/user/stock-tracker",
+        "status": "Completed",
+        "tasks": {
+            "active": [],
+            "completed": ["Fetch stock data from API", "Create stock chart visualization", "Add alert notifications"]
+        }
+    },
+    {
+        "id": 10,
+        "title": "Fitness App",
+        "description": "An app to track fitness activities and goals.",
+        "coding_language": "Swift",
+        "hours_logged": 45,
+        "github_link": "https://github.com/user/fitness-app",
+        "status": "In Progress",
+        "tasks": {
+            "active": ["Add workout tracking feature", "Implement goal setting"],
+            "completed": ["Create user profile", "Set up database"]
+        }
+    }
+]
