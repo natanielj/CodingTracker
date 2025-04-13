@@ -19,13 +19,12 @@ export const styles = StyleSheet.create({
       flex: 1,
       paddingTop: 60,
       paddingBottom: 20,
-            backgroundColor: '#fff'
+      backgroundColor: '#fff'
     },
     stepContainer: {
       fontSize: 10,
-      marginBottom: 7,
+      paddingBottom: 20,
       alignItems: 'center',
-
     },
     reactLogo: {
       height: 177,
