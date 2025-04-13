@@ -24,15 +24,16 @@ export default function HomeScreen() {
                 <HelloWave />
             </ThemedView>
             <View style={styles.stepContainer}>
-                <ThemedText style={{ fontSize: 18, color: 'black' }}>Day X</ThemedText> 
+                {/* <ThemedText style={{ fontSize: 18, color: 'black' }}>Day 1</ThemedText>  */}
             </View>
             <ThemedView style={styles.circularProgressContainer}>
                 <CircularProgress
-                    value={85}
+                    title={'Day'}
+                    value={1}
                     inActiveStrokeColor={'black'}
                     inActiveStrokeOpacity={0.1}
                     radius={75}
-                    title={'Progress'}
+                    
                     titleColor={'black'}
                     progressValueColor={'black'}
                     duration={500}

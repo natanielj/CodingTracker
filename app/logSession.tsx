@@ -125,6 +125,30 @@ export default function logSession() {
             )
         }
     }
+
+      // 1) Track time left in state. 3600 = 60 minutes.
+    const [timeLeft, setTimeLeft] = useState(300);
+
+    // 2) Decrement every second
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft((prev) => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    return 0;
+                }
+                return prev - 1;
+            });
+    }, 1000);
+
+
+    // Cleanup interval on unmount
+    return () => clearInterval(timer);
+    }, []);
+
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+
     return (
         <ThemedView style={styles.mainContainer}>
             <View style={styles.titleContainer}>
@@ -132,7 +156,7 @@ export default function logSession() {
             </View>
             <ThemedView style={styles.circularProgressContainer}>
                 <CircularProgress
-                    value={300} // 5 minutes in seconds
+                    value={timeLeft}
                     inActiveStrokeColor={'black'}
                     inActiveStrokeOpacity={0.1}
                     radius={75}

@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 
 export default function TabTwoScreen() {
   const router = useRouter();
-  const user = data.filter(user => user.userId === 1); // Assuming userId is 1 for demo purposes
+  const user = data.filter(user => user.userId === 4); // Assuming userId is 1 for demo purposes
 
   const handleAddProject = () => {
     router.push('../projForm');
@@ -30,7 +30,7 @@ export default function TabTwoScreen() {
     //   }>
     <View style={styles1.mainContainer}>
         <View style={styles1.stepContainer}>
-            <ThemedText type="title">Projects</ThemedText>
+            <ThemedText type="title" style={{paddingBottom: 20 }}>Projects</ThemedText>
             <Button title="Add Project" onPress={() => {handleAddProject()}} />
         </View>
        <FlatList
@@ -74,7 +74,7 @@ const Item = ({ title, description, id, coding_language, hours_logged, github_li
   return (
     <View style={styles.item}>
       <View style={{ flex: 1 }}>
-        <Text style={styles.title}>{title}</Text>
+        <Text style={{fontSize:25, fontWeight: 'bold'}}>{title}</Text>
         <Text style={{ width: 180 }}>{description}</Text>
       </View>
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -90,12 +90,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
+    paddingBottom: 20,
   },
   item: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: {'blue': '#A1CEDC', 'dark': '#1D3D47'}['blue'], // Change to 'dark' for dark mode and color can indicate the status of each project
+    backgroundColor: {'blue': '#fff', 'dark': '#fff'}['blue'], // Change to 'dark' for dark mode and color can indicate the status of each project
     padding: 20,
     borderRadius: 10,
     marginVertical: 8,
