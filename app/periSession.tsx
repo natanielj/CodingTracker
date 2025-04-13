@@ -5,7 +5,7 @@ import { ThemedView } from '@/components/ThemedView';
 import { useForm, Controller } from 'react-hook-form';
 import CircularProgress from 'react-native-circular-progress-indicator';
 import React , {useState, useEffect} from 'react';
-import { View, Text, Button, StyleSheet} from 'react-native';
+import { View, Text, Button, StyleSheet, TextInput} from 'react-native';
 // import CheckList from '@/components/CheckList';
 import Checkbox from 'expo-checkbox';
 
@@ -63,6 +63,12 @@ export default function periSession() {
             </View>
             <ThemedText style={{ fontSize: 20, color: 'black', marginVertical: 10 , fontWeight: 'bold', textAlign: 'center'}}>{proj}: {tasksAct}</ThemedText>
             <ThemedText style={{ fontSize: 18, color: 'black', marginVertical: 10, fontWeight: 'bold', textAlign: 'left', paddingLeft: 40, }}>Active Task List:</ThemedText>
+            <View style={{ alignItems: "center"}}>
+            <TextInput
+                    style={{ alignItems:"center", width: 500,borderWidth: 1, borderColor: '#808080', padding: 8, marginBottom: 10 }}
+            />
+            </View>
+            
             <View>
                 {(typeof taskList === 'string' ? taskList.split(',') : taskList || []).map((task, index) => (
                     <ThemedText key={index} style={{ fontSize: 16, color: 'black', marginVertical: 5, textAlign: 'center' }}>
@@ -71,7 +77,13 @@ export default function periSession() {
                 ))}
             </View>
             <Text style={{ fontSize: 18, color: 'black', marginVertical: 10 , fontWeight: 'bold', textAlign: 'left', paddingLeft: 40,}}>Previous Completed Tasks:</Text>
-            <View>
+            <View style={{ alignItems: "center"}}>
+
+            <TextInput
+                    style={{ alignContent:"center", width: 500,borderWidth: 1, borderColor: '#808080', padding: 8, marginBottom: 10 }}
+            />
+            </View>
+           <View>
                 {(typeof prevTasks === 'string' ? prevTasks.split(',') : prevTasks || []).map((task, index) => (
                     <Text key={index} style={{ fontSize: 16, color: 'black', marginVertical: 5 , textAlign: 'center'}}>
                         {task}
