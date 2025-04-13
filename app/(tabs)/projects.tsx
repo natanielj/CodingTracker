@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 
 export default function TabTwoScreen() {
   const router = useRouter();
-  const user = data.filter(user => user.userId === 1); // Assuming userId is 1 for demo purposes
+  const user = data.filter(user => user.userId === 4); // Assuming userId is 1 for demo purposes
 
   const handleAddProject = () => {
     router.push('../projForm');
@@ -74,7 +74,7 @@ const Item = ({ title, description, id, coding_language, hours_logged, github_li
   return (
     <View style={styles.item}>
       <View style={{ flex: 1 }}>
-        <Text style={styles.title}>{title}</Text>
+        <Text style={{fontSize:25, fontWeight: 'bold'}}>{title}</Text>
         <Text style={{ width: 180 }}>{description}</Text>
       </View>
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
