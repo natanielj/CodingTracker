@@ -1,134 +1,280 @@
 [
     {
-
-        "id": 1,
-        "title": "Weather App",
-        "description": "pacer test.",
-        "coding_language": "JavaScript",
-        "hours_logged": 25,
-        "github_link": "https://github.com/user/weather-app",
-        "status": "Completed",
-        "tasks": {
-            "active": [],
-            "completed": ["Design UI", "Implement API integration", "Test application"]
-        }
+        "userId": 1,
+        "username": "user1",
+        "total_sessions": 120,
+        "current_streak": 5,
+        "longest_streak": 15,
+        "projects": [
+            {
+                "id": 1,
+                "title": "Weather App",
+                "description": "pacer test.",
+                "coding_language": "JavaScript",
+                "hours_logged": 25,
+                "github_link": "https://github.com/user/weather-app",
+                "status": "Completed",
+                "tasks": {
+                    "active": [],
+                    "completed": ["Design UI", "Implement API integration", "Test application"]
+                }
+            },
+            {
+                "id": 2,
+                "title": "Expense Tracker",
+                "description": "An app to track daily expenses.",
+                "coding_language": "Python",
+                "hours_logged": 15,
+                "github_link": "https://github.com/user/expense-tracker",
+                "status": "In Progress",
+                "tasks": {
+                    "active": ["Add reporting feature"],
+                    "completed": ["Set up database", "Create UI"]
+                }
+            },
+            {
+                "id": 3,
+                "title": "Blog Platform",
+                "description": "A platform to create and share blogs.",
+                "coding_language": "Ruby",
+                "hours_logged": 30,
+                "github_link": "https://github.com/user/blog-platform",
+                "status": "Completed",
+                "tasks": {
+                    "active": [],
+                    "completed": ["Set up authentication", "Design blog editor"]
+                }
+            }
+        ],
+        "current_goal": 2,
+        "activity_log": [
+            {
+                "time_of_event": "2023-10-01T10:00:00Z",
+                "project_worked_on": "Weather App",
+                "amount_of_time_worked": 2
+            }
+        ]
     },
     {
-        "id": 2,
-        "title": "Task Manager",
-        "description": "An app to manage daily tasks and to-do lists.",
-        "coding_language": "Python",
-        "hours_logged": 40,
-        "github_link": "https://github.com/user/task-manager",
-        "status": "In Progress",
-        "tasks": {
-            "active": ["Implement user authentication", "Add task categorization"],
-            "completed": ["Set up project structure", "Create database schema"]
-        }
-        
+        "userId": 2,
+        "username": "user2",
+        "total_sessions": 80,
+        "current_streak": 3,
+        "longest_streak": 10,
+        "projects": [
+            {
+                "id": 1,
+                "title": "Task Manager",
+                "description": "An app to manage daily tasks and to-do lists.",
+                "coding_language": "Python",
+                "hours_logged": 40,
+                "github_link": "https://github.com/user2/task-manager",
+                "status": "In Progress",
+                "tasks": {
+                    "active": ["Implement user authentication"],
+                    "completed": ["Set up project structure"]
+                }
+            },
+            {
+                "id": 2,
+                "title": "Recipe App",
+                "description": "An app to store and share recipes.",
+                "coding_language": "JavaScript",
+                "hours_logged": 20,
+                "github_link": "https://github.com/user2/recipe-app",
+                "status": "Completed",
+                "tasks": {
+                    "active": [],
+                    "completed": ["Create recipe database", "Design UI"]
+                }
+            },
+            {
+                "id": 3,
+                "title": "Fitness Tracker",
+                "description": "An app to track fitness activities.",
+                "coding_language": "Java",
+                "hours_logged": 25,
+                "github_link": "https://github.com/user2/fitness-tracker",
+                "status": "In Progress",
+                "tasks": {
+                    "active": ["Add workout analytics"],
+                    "completed": ["Set up user profiles"]
+                }
+            }
+        ],
+        "current_goal": 30,
+        "activity_log": [
+            {
+                "time_of_event": "2023-10-02T14:00:00Z",
+                "project_worked_on": "Task Manager",
+                "amount_of_time_worked": 3
+            }
+        ]
     },
     {
-        "id": 3,
-        "title": "Portfolio Website",
-        "description": "A personal portfolio showcasing projects and skills.",
-        "coding_language": "HTML/CSS",
-        "hours_logged": 15,
-        "github_link": "https://github.com/user/portfolio-website",
-        "status": "Completed",
-        "tasks": {
-            "active": [],
-            "completed": ["Design layout", "Add project showcase", "Optimize for mobile"]
-        }
+        "userId": 3,
+        "username": "user3",
+        "total_sessions": 150,
+        "current_streak": 7,
+        "longest_streak": 20,
+        "projects": [
+            {
+                "id": 1,
+                "title": "Portfolio Website",
+                "description": "A personal portfolio showcasing projects and skills.",
+                "coding_language": "HTML/CSS",
+                "hours_logged": 15,
+                "github_link": "https://github.com/user3/portfolio-website",
+                "status": "Completed",
+                "tasks": {
+                    "active": [],
+                    "completed": ["Design layout", "Add project showcase"]
+                }
+            },
+            {
+                "id": 2,
+                "title": "E-learning Platform",
+                "description": "A platform for online courses.",
+                "coding_language": "PHP",
+                "hours_logged": 50,
+                "github_link": "https://github.com/user3/e-learning-platform",
+                "status": "In Progress",
+                "tasks": {
+                    "active": ["Add payment integration"],
+                    "completed": ["Set up course structure"]
+                }
+            },
+            {
+                "id": 3,
+                "title": "Social Media App",
+                "description": "A social media platform for connecting people.",
+                "coding_language": "React",
+                "hours_logged": 35,
+                "github_link": "https://github.com/user3/social-media-app",
+                "status": "Completed",
+                "tasks": {
+                    "active": [],
+                    "completed": ["Implement messaging", "Design user profiles"]
+                }
+            }
+        ],
+        "current_goal": 60,
+        "activity_log": [
+            {
+                "time_of_event": "2023-10-03T16:00:00Z",
+                "project_worked_on": "Portfolio Website",
+                "amount_of_time_worked": 1.5
+            }
+        ]
     },
     {
-        "id": 4,
-        "title": "E-commerce Platform",
-        "description": "A platform for buying and selling products online.",
-        "coding_language": "PHP",
-        "hours_logged": 60,
-        "github_link": "https://github.com/user/ecommerce-platform",
-        "status": "In Progress",
-        "tasks": {
-            "active": ["Integrate payment gateway", "Implement product search"],
-            "completed": ["Set up database", "Create user registration"]
-        }
+        "userId": 4,
+        "username": "user4",
+        "total_sessions": 200,
+        "current_streak": 10,
+        "longest_streak": 25,
+        "projects": [
+            {
+                "id": 1,
+                "title": "E-commerce Platform",
+                "description": "A platform for buying and selling products online.",
+                "coding_language": "PHP",
+                "hours_logged": 60,
+                "github_link": "https://github.com/user4/ecommerce-platform",
+                "status": "In Progress",
+                "tasks": {
+                    "active": ["Integrate payment gateway"],
+                    "completed": ["Set up database"]
+                }
+            },
+            {
+                "id": 2,
+                "title": "Inventory Management System",
+                "description": "A system to manage inventory for businesses.",
+                "coding_language": "C#",
+                "hours_logged": 40,
+                "github_link": "https://github.com/user4/inventory-management",
+                "status": "Completed",
+                "tasks": {
+                    "active": [],
+                    "completed": ["Create inventory database", "Design reporting feature"]
+                }
+            },
+            {
+                "id": 3,
+                "title": "Online Forum",
+                "description": "A forum for discussions and Q&A.",
+                "coding_language": "Python",
+                "hours_logged": 30,
+                "github_link": "https://github.com/user4/online-forum",
+                "status": "In Progress",
+                "tasks": {
+                    "active": ["Add moderation tools"],
+                    "completed": ["Set up user authentication"]
+                }
+            }
+        ],
+        "current_goal": 70,
+        "activity_log": [
+            {
+                "time_of_event": "2023-10-04T18:00:00Z",
+                "project_worked_on": "E-commerce Platform",
+                "amount_of_time_worked": 4
+            }
+        ]
     },
     {
-        "id": 5,
-        "title": "Chat Application",
-        "description": "A real-time chat application.",
-        "coding_language": "Node.js",
-        "hours_logged": 35,
-        "github_link": "https://github.com/user/chat-application",
-        "status": "Completed",
-        "tasks": {
-            "active": [],
-            "completed": ["Set up WebSocket server", "Implement chat UI", "Add user presence feature"]
-        }
-    },
-    {
-        "id": 6,
-        "title": "Expense Tracker",
-        "description": "An app to track personal expenses and budgets.",
-        "coding_language": "Java",
-        "hours_logged": 20,
-        "github_link": "https://github.com/user/expense-tracker",
-        "status": "In Progress",
-        "tasks": {
-            "active": ["Add budget analysis feature", "Implement recurring expenses"],
-            "completed": ["Create expense input form", "Set up database"]
-        }
-    },
-    {
-        "id": 7,
-        "title": "Blog Platform",
-        "description": "A platform for creating and managing blogs.",
-        "coding_language": "Ruby",
-        "hours_logged": 50,
-        "github_link": "https://github.com/user/blog-platform",
-        "status": "Completed",
-        "tasks": {
-            "active": [],
-            "completed": ["Create blog editor", "Add comment functionality", "Optimize for SEO"]
-        }
-    },
-    {
-        "id": 8,
-        "title": "Game Engine",
-        "description": "A basic 2D game engine.",
-        "coding_language": "C++",
-        "hours_logged": 100,
-        "github_link": "https://github.com/user/game-engine",
-        "status": "In Progress",
-        "tasks": {
-            "active": ["Implement physics engine", "Add sprite animation support"],
-            "completed": ["Set up rendering engine", "Create input handling system"]
-        }
-    },
-    {
-        "id": 9,
-        "title": "Stock Tracker",
-        "description": "An app to track stock prices and trends.",
-        "coding_language": "C#",
-        "hours_logged": 30,
-        "github_link": "https://github.com/user/stock-tracker",
-        "status": "Completed",
-        "tasks": {
-            "active": [],
-            "completed": ["Fetch stock data from API", "Create stock chart visualization", "Add alert notifications"]
-        }
-    },
-    {
-        "id": 10,
-        "title": "Fitness App",
-        "description": "An app to track fitness activities and goals.",
-        "coding_language": "Swift",
-        "hours_logged": 45,
-        "github_link": "https://github.com/user/fitness-app",
-        "status": "In Progress",
-        "tasks": {
-            "active": ["Add workout tracking feature", "Implement goal setting"],
-            "completed": ["Create user profile", "Set up database"]
-        }
+        "userId": 5,
+        "username": "user5",
+        "total_sessions": 90,
+        "current_streak": 4,
+        "longest_streak": 12,
+        "projects": [
+            {
+                "id": 1,
+                "title": "Chat Application",
+                "description": "A real-time chat application.",
+                "coding_language": "Node.js",
+                "hours_logged": 35,
+                "github_link": "https://github.com/user5/chat-application",
+                "status": "Completed",
+                "tasks": {
+                    "active": [],
+                    "completed": ["Set up WebSocket server", "Implement chat UI"]
+                }
+            },
+            {
+                "id": 2,
+                "title": "Music Streaming App",
+                "description": "An app to stream and manage music playlists.",
+                "coding_language": "Java",
+                "hours_logged": 45,
+                "github_link": "https://github.com/user5/music-streaming-app",
+                "status": "In Progress",
+                "tasks": {
+                    "active": ["Add playlist sharing"]
+                }
+            },
+            {
+                "title": "Travel Planner",
+                "description": "An app to plan and organize trips.",
+                "coding_language": "Swift",
+                "hours_logged": 20,
+                "github_link": "https://github.com/user5/travel-planner",
+                "status": "Completed",
+                "tasks": {
+                    "active": [],
+                    "completed": ["Create itinerary feature", "Add map integration"]
+                    }
+            }
+        ],
+        "current_goal": 40,
+        "activity_log": [
+            {
+                "time_of_event": "2023-10-05T20:00:00Z",
+                "project_worked_on": "Chat Application",
+                "amount_of_time_worked": 2.5
+            }
+        ]
     }
 ]
