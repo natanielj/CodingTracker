@@ -1,5 +1,6 @@
 [
     {
+
         "id": 1,
         "title": "Weather App",
         "description": "pacer test.",
@@ -24,6 +25,7 @@
             "active": ["Implement user authentication", "Add task categorization"],
             "completed": ["Set up project structure", "Create database schema"]
         }
+        
     },
     {
         "id": 3,

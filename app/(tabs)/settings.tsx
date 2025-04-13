@@ -1,4 +1,4 @@
-import { View, Image, FlatList, StyleSheet, StatusBar, Text } from 'react-native';
+import { View, Image, Button, StyleSheet, StatusBar, Text } from 'react-native';
 import { styles as styles1 } from '@/constants/styles';
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -19,46 +19,17 @@ export default function TabTwoScreen() {
           style={styles1.reactLogo}
         />
       }>
-    <View style={styles1.mainContainer}>
-        <View style={styles1.stepContainer}>
-            <ThemedText type="title">settings</ThemedText>
-        </View>
-        <FlatList
-                  data={testDictionary}
-                  renderItem={({item}) => <Item title={item.title} />}
-        />
-    </View>
+      <View style={styles.container}>
+        <ThemedView style={styles1.stepContainer}>
+          <ThemedText style={{ fontSize: 18, color: 'black' }}>Settings</ThemedText>
+        </ThemedView>
+        <Button title="Log in with Github" />
+      </View>
     </ParallaxScrollView>
     );
 }
 
-const testDictionary = [
-    { id: 1, title: 'Light/Dark Mode' },
-    { id: 2, title: 'Goals' },
-    { id: 3, title: 'Shenanigans' },
-    { id: 4, title: 'Shenanigans' },
-    { id: 5, title: 'Shenanigans' },
-    { id: 6, title: 'Shenanigans' },
-    { id: 7, title: 'Shenanigans' },
-    { id: 8, title: 'Shenanigans' },
-    { id: 9, title: 'Shenanigans' },
-    { id: 10, title: 'Shenanigans' },
-];
 
-
-type ItemProps = {title: string};
-
-const Item = ({title}: ItemProps) => (
-  <View style={styles.item}>
-    <View>    
-        <Text style={styles.title}>{title}</Text>
-        <Text>Description for {title}</Text>
-    </View>
-    <View>
-        <IconSymbol size={28} name="chevron.right" color="#000" />
-    </View>
-  </View>
-);
 
 const styles = StyleSheet.create({
   container: {

@@ -91,8 +91,8 @@ const formStyles = {
         // elevation: 5,
     },
     titleContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between'
+        flexDirection: "row" as "row",
+        justifyContent: "space-between" as "space-between",
     },
     BrainstormSection: {
         paddingVertical: 50,

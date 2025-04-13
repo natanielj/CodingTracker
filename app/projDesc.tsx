@@ -4,10 +4,12 @@ import { View, Image, FlatList, StyleSheet, StatusBar, Text } from 'react-native
 import data from "../constants/dummydb.json";
 import { useGlobalSearchParams } from 'expo-router';
 import { Linking } from 'react-native';
+import Checkbox from 'expo-checkbox';
+
 
 
 export default function ProjDesc() {
-    const { userId, desc, id, coding_language, hours_logged, github_link, status } = useGlobalSearchParams()
+    const { userId, desc, id, coding_language, hours_logged, github_link, status, taskList, prevTasks } = useGlobalSearchParams()
     return(
         <ThemedView style={styles.mainContainer}>
         <View style={styles.titleContainer}>
@@ -17,7 +19,31 @@ export default function ProjDesc() {
             <ThemedText type="subtitle">Hours Logged: {hours_logged}</ThemedText>
             <ThemedText type="subtitle">Status: {status}</ThemedText>
             <Text style={{ color: 'blue' }} onPress={() => typeof github_link === 'string' && Linking.openURL(github_link)}>View on GitHub</Text>
-        </View>
+            </View>
+                <Text style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>Active Task List:</Text>
+                    <View>
+                        {(typeof taskList === 'string' ? taskList.split(',') : taskList || []).map((task, index) => (
+                            <Text key={index} style={{ fontSize: 16, color: 'black', marginVertical: 5 }}>
+                                {task}
+                            </Text>
+                        ))}
+                    </View>
+                    <Text style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>Previous Completed Tasks:</Text>
+                    <View>
+                        {(typeof prevTasks === 'string' ? prevTasks.split(',') : prevTasks || []).map((task, index) => (
+                            <FlatList
+                                data={typeof prevTasks === 'string' ? prevTasks.split(',') : prevTasks || []}
+                                keyExtractor={(item, index) => index.toString()}
+                                renderItem={({ item }) => (
+                                    <Text style={{ fontSize: 16, color: 'black', marginVertical: 5 }}>
+                                        {item}
+                                    </Text>
+                                )}
+                            />
+                        ))}
+                    </View>
+                <View>
+            </View>
         </ThemedView>
     );
 }

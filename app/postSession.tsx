@@ -11,15 +11,16 @@ import Checkbox from 'expo-checkbox';
 
 
 export default function periSession() {
-    const { tasksAct, proj, taskList, prevTasks } = useGlobalSearchParams();
-    
+    // const { tasksAct, proj, taskList, prevTasks } = useGlobalSearchParams();
+
+
     const router = useRouter();
 
-    const handleButtonPress = () => router.push('/postSession'); // Navigate back to the session screen
+    const handleButtonPress = () => router.push('/'); // Navigate back to the session screen
     return (
         <ThemedView style={styles.mainContainer}>
             <View style={styles.titleContainer}>
-                <ThemedText type="title" style={styles.contentContainer}>Start Coding!</ThemedText>
+                <ThemedText type="title" style={styles.contentContainer}>Congrats!</ThemedText>
             </View>
             <ThemedView style={styles.circularProgressContainer}>
                 <CircularProgress
@@ -35,8 +36,11 @@ export default function periSession() {
             </ThemedView>
             <View style={styles.contentContainer}>
                 <Button title="End Session" onPress={handleButtonPress} />
+                <Button title="Continue" onPress={handleButtonPress} />
             </View>
-            <ThemedText style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>{proj}: {tasksAct}</ThemedText>
+            
+
+            {/* <ThemedText style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>{proj}: {tasksAct}</ThemedText>
             <ThemedText style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>Active Task List:</ThemedText>
             <View>
                 {(typeof taskList === 'string' ? taskList.split(',') : taskList || []).map((task, index) => (
@@ -52,7 +56,7 @@ export default function periSession() {
                         {task}
                     </Text>
                 ))}
-            </View>
+            </View> */}
             
         </ThemedView>
     );

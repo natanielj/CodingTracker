@@ -34,7 +34,7 @@ export default function TabTwoScreen() {
         </View>
        <FlatList
           data={data}
-          renderItem={({item}) => <Item title={item.title} description={item.description} id={item.id} coding_language={item.coding_language} hours_logged={item.hours_logged} github_link={item.github_link} status={item.status}/>}
+          renderItem={({item}) => <Item title={item.title} description={item.description} id={item.id} coding_language={item.coding_language} hours_logged={item.hours_logged} github_link={item.github_link} status={item.status} active={item.tasks.active} completed={item.tasks.completed}/>}
         />
     </View>
     </ParallaxScrollView>
@@ -43,8 +43,8 @@ export default function TabTwoScreen() {
 
 
 
-type ItemProps = {title: string, description: string, id: number, coding_language?: string, hours_logged?: number, github_link?: string, status?: string};
-const Item = ({ title, description, id, coding_language, hours_logged, github_link, status }: ItemProps) => {
+type ItemProps = {title: string, description: string, id: number, coding_language: string, hours_logged: number, github_link: string, status: string, active?: string[], completed?: string[]};
+const Item = ({ title, description, id, coding_language, hours_logged, github_link, status, active, completed }: ItemProps) => {
   const router = useRouter();
   const post = useLocalSearchParams();
   const handlePress = () => {
@@ -57,7 +57,9 @@ const Item = ({ title, description, id, coding_language, hours_logged, github_li
         coding_language: coding_language,
         hours_logged: hours_logged,
         github_link: github_link,
-        status: status
+        status: status,
+        taskList: active,
+        prevTasks: completed
       },
     });
   };
