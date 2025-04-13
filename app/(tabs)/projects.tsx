@@ -30,7 +30,7 @@ export default function TabTwoScreen() {
     //   }>
     <View style={styles1.mainContainer}>
         <View style={styles1.stepContainer}>
-            <ThemedText type="title">Projects</ThemedText>
+            <ThemedText type="title" style={{paddingBottom: 20 }}>Projects</ThemedText>
             <Button title="Add Project" onPress={() => {handleAddProject()}} />
         </View>
        <FlatList
