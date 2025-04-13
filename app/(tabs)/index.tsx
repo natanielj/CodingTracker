@@ -44,7 +44,18 @@ export default function HomeScreen() {
             <ThemedView style={styles.contentContainer}>
                 <ThemedText type="title">Recent Activity</ThemedText>
             </ThemedView>   
-        <Timeline data={activityData} /> 
+            <Timeline
+                data={activityData}
+                columnFormat="single-column-left"
+                style={{
+                    paddingLeft: "5%",
+                    width : "60%",
+                    alignSelf: 'center',     // 👈 Center it horizontally
+                }}
+                timeContainerStyle={{
+                    alignItems: 'flex-end',  // Adjust time alignment if needed
+                }}
+            />
         </ThemedView>
     );
 }
