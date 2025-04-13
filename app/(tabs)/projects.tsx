@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: {'blue': '#A1CEDC', 'dark': '#1D3D47'}['blue'], // Change to 'dark' for dark mode and color can indicate the status of each project
+    backgroundColor: {'blue': '#fff', 'dark': '#fff'}['blue'], // Change to 'dark' for dark mode and color can indicate the status of each project
     padding: 20,
     borderRadius: 10,
     marginVertical: 8,
