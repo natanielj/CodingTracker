@@ -16,23 +16,16 @@ export default function HomeScreen() {
         // Uncomment the following line to navigate to the log session page on button press
     const handleButtonPress = () => router.push('/logSession');
     return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
         <ThemedView style={styles.mainContainer}>
-            <View style={styles.stepContainer}>
-                <ThemedText style={{ fontSize: 18, color: 'black' }}>Day X</ThemedText> 
-            </View>
+
             <ThemedView style={styles.contentContainer}>
                 <ThemedText type="title">Hello</ThemedText>
                 <ThemedText type="title">Coder!</ThemedText>
                 <HelloWave />
             </ThemedView>
+            <View style={styles.stepContainer}>
+                <ThemedText style={{ fontSize: 18, color: 'black' }}>Day X</ThemedText> 
+            </View>
             <ThemedView style={styles.circularProgressContainer}>
                 <CircularProgress
                     value={85}
@@ -53,7 +46,6 @@ export default function HomeScreen() {
             </ThemedView>   
         <Timeline data={activityData} /> 
         </ThemedView>
-    </ParallaxScrollView>
     );
 }
 

@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     },
     mainContainer: {
       flex: 1,
-      paddingTop: 20,
+      paddingTop: 60,
       paddingBottom: 20,
     },
     stepContainer: {
@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: 20,
+        paddingTop: 40,
         paddingBottom: 20,
         gap: 7,
     },

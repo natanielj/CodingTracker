@@ -13,31 +13,38 @@ import { useEffect } from 'react';
 
 export default function TabTwoScreen() {
   const router = useRouter();
+  const user = data.filter(user => user.userId === 1); // Assuming userId is 1 for demo purposes
 
   const handleAddProject = () => {
     router.push('../projForm');
   }
 
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles1.reactLogo}
-        />
-      }>
+    // <ParallaxScrollView
+    //   headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+    //   headerImage={
+    //     <Image
+    //       source={require('@/assets/images/partial-react-logo.png')}
+    //       style={styles1.reactLogo}
+    //     />
+    //   }>
     <View style={styles1.mainContainer}>
         <View style={styles1.stepContainer}>
             <ThemedText type="title">Projects</ThemedText>
             <Button title="Add Project" onPress={() => {handleAddProject()}} />
         </View>
        <FlatList
-          data={data}
+          data={user[0]?.projects?.map(project => ({
+            ...project,
+            tasks: {
+              ...project.tasks,
+              completed: project.tasks.completed || [],
+            },
+          }))}
           renderItem={({item}) => <Item title={item.title} description={item.description} id={item.id} coding_language={item.coding_language} hours_logged={item.hours_logged} github_link={item.github_link} status={item.status} active={item.tasks.active} completed={item.tasks.completed}/>}
         />
     </View>
-    </ParallaxScrollView>
+    // </ParallaxScrollView>
     );
 }
 

@@ -17,6 +17,14 @@ export default function logSession() {
         { label: "Projects", value: "0" },
         { label: "Leetcode", value: "1" },
     ];
+    const user = rawData.filter(user => user.userId === 4); // Assuming userId is 1 for demo purposes
+    const userProjects = user[0]?.projects?.map(project => ({
+        ...project,
+        tasks: {
+          ...project.tasks,
+          completed: project.tasks.completed || [],
+        },
+    }));
     const [isFocus, setIsFocus] = useState(false);
     const [value, setValue] = useState(null);
 
@@ -31,7 +39,7 @@ export default function logSession() {
         return null;
     };
 
-    const projData = rawData.map((item, index) => ({
+    const projData = userProjects.map((item, index) => ({
         title: item.title || `Item ${index + 1}`,
         id: item.id,
         completedTasks: item.tasks.completed,
