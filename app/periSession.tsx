@@ -61,7 +61,7 @@ export default function periSession() {
             <View style={styles.contentContainer}>
                 <Button title="End Session" onPress={handleButtonPress} />
             </View>
-            <ThemedText style={{ fontSize: 25, color: 'black', marginVertical: 10 , fontWeight: 'bold', textAlign: 'center'}}>{proj}: {tasksAct}</ThemedText>
+            <ThemedText style={{ fontSize: 20, color: 'black', marginVertical: 10 , fontWeight: 'bold', textAlign: 'center'}}>{proj}: {tasksAct}</ThemedText>
             <ThemedText style={{ fontSize: 18, color: 'black', marginVertical: 10, fontWeight: 'bold', textAlign: 'left', paddingLeft: 40, }}>Active Task List:</ThemedText>
             <View>
                 {(typeof taskList === 'string' ? taskList.split(',') : taskList || []).map((task, index) => (
