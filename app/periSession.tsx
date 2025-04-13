@@ -4,7 +4,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { useForm, Controller } from 'react-hook-form';
 import CircularProgress from 'react-native-circular-progress-indicator';
-import React , {useState} from 'react';
+import React , {useState, useEffect} from 'react';
 import { View, Text, Button, StyleSheet} from 'react-native';
 // import CheckList from '@/components/CheckList';
 import Checkbox from 'expo-checkbox';
@@ -15,6 +15,30 @@ export default function periSession() {
     
     const router = useRouter();
 
+      // 1) Track time left in state. 3600 = 60 minutes.
+    const [timeLeft, setTimeLeft] = useState(3600);
+
+    // 2) Decrement every second
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft((prev) => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    return 0;
+                }
+                return prev - 1;
+            });
+    }, 1000);
+
+
+    // Cleanup interval on unmount
+    return () => clearInterval(timer);
+    }, []);
+
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+
+
     const handleButtonPress = () => router.push('/postSession'); // Navigate back to the session screen
     return (
         <ThemedView style={styles.mainContainer}>
@@ -23,14 +47,15 @@ export default function periSession() {
             </View>
             <ThemedView style={styles.circularProgressContainer}>
                 <CircularProgress
-                    value={85}
+                    value={timeLeft}
+                    maxValue={3600}
+                    title={`${minutes}:${seconds.toString().padStart(2, '0')}`}
                     inActiveStrokeColor={'blue'}
                     inActiveStrokeOpacity={0.1}
                     radius={75}
-                    title={''}
                     titleColor={'blue'}
                     progressValueColor={'skyblue'}
-                    duration={500}
+                    showProgressValue={false}
                 />
             </ThemedView>
             <View style={styles.contentContainer}>
