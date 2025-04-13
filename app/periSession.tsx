@@ -61,19 +61,21 @@ export default function periSession() {
             <View style={styles.contentContainer}>
                 <Button title="End Session" onPress={handleButtonPress} />
             </View>
-            <ThemedText style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>{proj}: {tasksAct}</ThemedText>
-            <ThemedText style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>Active Task List:</ThemedText>
+            <ThemedText style={{ fontSize: 25, color: 'black', marginVertical: 10 , fontWeight: 'bold', textAlign: 'center'}}>{proj}: {tasksAct}</ThemedText>
+            <ThemedText style={{ fontSize: 18, color: 'black', marginVertical: 10, 
+    fontWeight: 'bold',
+    textAlign: 'center' }}>Active Task List:</ThemedText>
             <View>
                 {(typeof taskList === 'string' ? taskList.split(',') : taskList || []).map((task, index) => (
-                    <ThemedText key={index} style={{ fontSize: 16, color: 'black', marginVertical: 5 }}>
+                    <ThemedText key={index} style={{ fontSize: 16, color: 'black', marginVertical: 5, textAlign: 'center' }}>
                         {task}
                     </ThemedText>
                 ))}
             </View>
-            <Text style={{ fontSize: 18, color: 'black', marginVertical: 10 }}>Previous Completed Tasks:</Text>
+            <Text style={{ fontSize: 18, color: 'black', marginVertical: 10 , fontWeight: 'bold', textAlign: 'center'}}>Previous Completed Tasks:</Text>
             <View>
                 {(typeof prevTasks === 'string' ? prevTasks.split(',') : prevTasks || []).map((task, index) => (
-                    <Text key={index} style={{ fontSize: 16, color: 'black', marginVertical: 5 }}>
+                    <Text key={index} style={{ fontSize: 16, color: 'black', marginVertical: 5 , textAlign: 'center'}}>
                         {task}
                     </Text>
                 ))}
